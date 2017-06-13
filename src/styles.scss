@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Cormorant+SC|Karla|Merriweather|Open+Sans|Raleway');
+
+$table-gradient: linear-gradient( 0deg, blue, green 40%, red );
+$table-background: #f2f2f2;
+.title {
+  font-family: 'Open Sans';
+  text-align: center;
+}
+.table-main {
+  font-family: 'Open Sans';
+  border-collapse: collapse;
+  width: 100%;
+  th, td {
+    text-align: left;
+    padding: 8px; 
+  }
+  th { 
+    text-transform: uppercase; 
+    border-bottom: solid 2px #333; 
+  }
+  tr:nth-child(even){ background-color: $table-background }
+  tr:hover{ 
+    background-color: #333;
+    color: white; 
+  }
+}
+.monospace {
+  font-family: monospace;
+}
+
+
+
+
