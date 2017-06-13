@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Cormorant+SC|Karla|Merriweather|Open+Sans|Raleway');
 
 $table-gradient: linear-gradient( 0deg, blue, green 40%, red );
+$table-gradient-background:  linear-gradient( 180deg,  #E1E1E1 0%, #EAEAEA 60% );
+$table-gradient-hover-background:  linear-gradient( 180deg,  #222 0%, #666 60% );
 $table-background: #f2f2f2;
 .title {
   font-family: 'Open Sans';
@@ -18,9 +20,9 @@ $table-background: #f2f2f2;
     text-transform: uppercase; 
     border-bottom: solid 2px #333; 
   }
-  tr:nth-child(even){ background-color: $table-background }
+  tr:nth-child(even){ background: $table-gradient-background }
   tr:hover{ 
-    background-color: #333;
+    background: $table-gradient-hover-background;
     color: white; 
   }
 }
