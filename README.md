@@ -1,4 +1,5 @@
-# NG-Morse-Code
+# reMORSE
+A Morse Code translator, emitter, and more. Also can translate into NATO phonetics (i.e. Alpha, Tango, Foxtrot), and Police phonetics. Project needs direction and is in early stages of development. 
 
 **TODO: Needs new name!**
 
