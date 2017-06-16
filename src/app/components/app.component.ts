@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Phonetic } from '../models/phonetic';
-import { PhoneticService } from '../services/phonetic.service';
 
 @Component({
   selector: 'app-root',
@@ -9,16 +7,9 @@ import { PhoneticService } from '../services/phonetic.service';
 })
 export class AppComponent implements OnInit {
   title = 'Morse Code & Phonetics Translator';
-  phonetics: Phonetic[];
 
-  constructor(private phoneticService: PhoneticService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.getPhonetics();
-  }
+  ngOnInit(): void { }
 
-  getPhonetics(): void {
-    this.phoneticService.getPhonetics()
-      .then(phonetics => this.phonetics = phonetics);
-  }
 }

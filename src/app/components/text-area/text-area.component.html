@@ -1,0 +1,20 @@
+<div>
+  <textarea rows="16" cols="80" class="txt" (keyup)="onKey($event)">
+  </textarea>
+  <div class="ouput">
+    <table *ngIf="words.length">
+      <thead>
+        <tr>
+          <th>Word</th>
+          <th>Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let word of words">
+          <td>{{ word }}</td>
+          <td>{{ word | morse }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

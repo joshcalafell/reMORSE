@@ -1,21 +1,13 @@
 
 <h1 class="title">{{ title }}</h1>
-<table class="table-main">
-  <thead>
-    <tr>
-      <th>Letter</th>
-      <th>Morse Code</th>
-      <th>NATO Phonetics</th>
-      <th>Police Phonetics</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let phonetic of phonetics">
-      <td>{{ phonetic.character | uppercase }}</td>
-      <td class="txt monospace">{{ phonetic.morse }}</td>
-      <td>{{ phonetic.telephony | uppercase }}</td>
-      <td>{{ phonetic.police | uppercase }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="top-container">
+  <app-text-area></app-text-area>
+  <app-legend></app-legend>
+  
+</div>
+
+<!-- <div class="bottom-container">
+  <app-phonetics-table></app-phonetics-table>
+</div> -->
+
 
