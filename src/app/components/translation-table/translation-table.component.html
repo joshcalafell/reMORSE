@@ -1,3 +1,16 @@
-<p>
-  translation-table works!
-</p>
+<div *ngIf="shouldRender">
+  <table id="table1" class="translation-table center">
+    <thead>
+      <tr class="tr-head">
+        <th>Word</th>
+        <th>Code</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="tr-body" *ngFor="let word of words">
+        <td>{{ word }}</td>
+        <td>{{ word | morse }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

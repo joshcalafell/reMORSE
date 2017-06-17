@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Phonetic } from '../../models/phonetic';
 import { PhoneticService } from '../../services/phonetic.service';
@@ -9,9 +9,11 @@ import { PhoneticService } from '../../services/phonetic.service';
   styleUrls: ['./translation-table.component.scss']
 })
 export class TranslationTableComponent implements OnInit {
+  @Input() words: string[];
+  @Input() shouldRender: boolean;
 
   constructor(private phoneticService: PhoneticService) { 
-    
+
   }
 
   ngOnInit() {

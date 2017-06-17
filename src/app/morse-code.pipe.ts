@@ -5,7 +5,7 @@ import { findIndex } from 'lodash';
 @Pipe({ name: 'morse' })
 export class MorseCodePipe implements PipeTransform {
   transform(word:string):string {
-    const letters = word.replace(/[^a-z0-9]/gi, "").toLowerCase().split('');
+    const letters = word.replace(/[^a-z0-9]/gi, '').toLowerCase().split('');
     let translation = '';
     for(let letter in letters) {
       const character = letters[letter];

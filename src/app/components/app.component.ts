@@ -7,13 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'Morse Code & Phonetics Translator';
-
+  words:string[] = [];
+  
   constructor() { 
-    
+
   }
 
   ngOnInit(): void {
 
+  }
+
+  public updateText(words: string[]): void {
+    this.words = words;
+  }
+
+  public shouldRender() {
+    return this.words && this.words.length;
   }
 
 }

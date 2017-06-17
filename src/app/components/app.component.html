@@ -1,9 +1,15 @@
 
 <h1 class="title">{{ title }}</h1>
 <div class="top-container">
-  <app-text-area></app-text-area>
+  <app-text-area (onTextUpdated)="updateText($event)"></app-text-area>
   <app-legend></app-legend>
   
+</div>
+<div class="bottom-container">
+  <app-translation-table 
+    [shouldRender]="shouldRender()" 
+    [words]="words">
+  </app-translation-table>
 </div>
 
 <!-- <div class="bottom-container">

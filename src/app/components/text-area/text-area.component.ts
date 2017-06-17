@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-text-area',
@@ -6,20 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./text-area.component.scss']
 })
 export class TextAreaComponent implements OnInit {
-  
-  words:string[] = [];
+  @Output() onTextUpdated: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit() { }
 
-  onChange(event:any) {
+  updateText(event: any): void {
     const { value } = event.target;
-    this.words = value.match(/\b(\w+)\b/g) || [];
-  }
-
-  shouldRenderTranslation() {
-    return this.words && this.words.length;
+    let word = value.match(/\b(\w+)\b/g) || [];
+    this.onTextUpdated.emit(word);
   }
 
 }
