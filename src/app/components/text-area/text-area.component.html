@@ -1,16 +1,19 @@
-<div>
-  <textarea rows="16" cols="80" class="txt" (keyup)="onKey($event)">
-  </textarea>
-  <div class="ouput">
-    <table *ngIf="words.length">
+<div class="text-area-component">
+  <textarea 
+    rows="14" 
+    cols="60" 
+    class="text-area left" 
+    (keyup)="onChange($event)"></textarea>
+  <div *ngIf="shouldRenderTranslation()">
+    <table class="translation-table">
       <thead>
-        <tr>
+        <tr class="tr-head">
           <th>Word</th>
           <th>Code</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let word of words">
+        <tr class="tr-body" *ngFor="let word of words">
           <td>{{ word }}</td>
           <td>{{ word | morse }}</td>
         </tr>

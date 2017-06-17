@@ -10,9 +10,12 @@ import { PhoneticService } from '../../services/phonetic.service';
 })
 export class TranslationTableComponent implements OnInit {
 
-  constructor(private phoneticService: PhoneticService) { }
+  constructor(private phoneticService: PhoneticService) { 
+    
+  }
 
   ngOnInit() {
+
   }
 
 }

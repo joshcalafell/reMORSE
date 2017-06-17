@@ -5,12 +5,12 @@ import { findIndex } from 'lodash';
 @Pipe({ name: 'morse' })
 export class MorseCodePipe implements PipeTransform {
   transform(word:string):string {
-    let w = word.replace(/[^a-z0-9]/gi, "").toLowerCase();
+    const letters = word.replace(/[^a-z0-9]/gi, "").toLowerCase().split('');
     let translation = '';
-    for (var i = 0; i < word.length; i++) {
-      let character = word[i];
-      let index = findIndex(PHONETICS, { character });
-      let morse = PHONETICS[index].morse;
+    for(let letter in letters) {
+      const character = letters[letter];
+      const index = findIndex(PHONETICS, { character });
+      const morse = PHONETICS[index].morse;
       translation += `[${morse}]`;
     }
     return translation;

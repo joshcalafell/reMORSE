@@ -7,16 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextAreaComponent implements OnInit {
   
-  words = [];
+  words:string[] = [];
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  onChange(event:any) {
+    const { value } = event.target;
+    this.words = value.match(/\b(\w+)\b/g) || [];
   }
 
-  onChange(event: any) { // without type info
-    let { value } = event.target;
-    this.words = value.split(' ');
+  shouldRenderTranslation() {
+    return this.words && this.words.length;
   }
 
 }
