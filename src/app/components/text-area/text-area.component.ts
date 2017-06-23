@@ -17,6 +17,4 @@ export class TextAreaComponent implements OnInit {
     this.onTextUpdated.emit(event);
   }
 
-  
-
 }
