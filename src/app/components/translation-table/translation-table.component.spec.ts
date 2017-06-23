@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MorseCodePipe } from '../../morse-code.pipe';
 import { TranslationTableComponent } from './translation-table.component';
 
 describe('TranslationTableComponent', () => {
@@ -8,7 +8,7 @@ describe('TranslationTableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TranslationTableComponent ]
+      declarations: [ TranslationTableComponent, MorseCodePipe ]
     })
     .compileComponents();
   }));

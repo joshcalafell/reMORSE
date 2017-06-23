@@ -6,6 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./text-area.component.scss']
 })
 export class TextAreaComponent implements OnInit {
+  
   @Output() onTextUpdated: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() { }
@@ -13,9 +14,9 @@ export class TextAreaComponent implements OnInit {
   ngOnInit() { }
 
   updateText(event: any): void {
-    const { value } = event.target;
-    let word = value.match(/\b(\w+)\b/g) || [];
-    this.onTextUpdated.emit(word);
+    this.onTextUpdated.emit(event);
   }
+
+  
 
 }

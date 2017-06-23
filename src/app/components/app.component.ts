@@ -17,12 +17,13 @@ export class AppComponent implements OnInit {
 
   }
 
-  public updateText(words: string[]): void {
+  public updateText(event): void {
+    let words = this.getTextArray(event.target.value);
     this.words = words;
   }
 
-  public shouldRender() {
-    return this.words && this.words.length;
+  getTextArray(text:string): string[] {
+    return text.match(/\b(\w+)\b/g) || [];
   }
 
 }

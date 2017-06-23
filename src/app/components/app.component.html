@@ -7,7 +7,7 @@
 </div>
 <div class="bottom-container">
   <app-translation-table 
-    [shouldRender]="shouldRender()" 
+    [shouldRender]="words && words.length" 
     [words]="words">
   </app-translation-table>
 </div>
