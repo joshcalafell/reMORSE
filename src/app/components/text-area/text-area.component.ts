@@ -6,14 +6,13 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./text-area.component.scss']
 })
 export class TextAreaComponent implements OnInit {
-  
   @Output() onTextUpdated: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit() { }
 
-  updateText(event: any): void {
+  public updateText(event: any): void {
     this.onTextUpdated.emit(event);
   }
 

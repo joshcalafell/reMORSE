@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 
 import { TextAreaComponent } from './text-area.component';
 
@@ -21,6 +21,16 @@ describe('TextAreaComponent', () => {
 
   it('should be created', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('emits an event on text update', (done) => {
+    let event = { target:{ value: 'sos'}};
+    component.onTextUpdated.subscribe(_event => {
+        expect(_event).not.toBeFalsy();
+        expect(_event).toEqual(event);
+        done();
+    });
+    component.updateText(event);
   });
 
 });

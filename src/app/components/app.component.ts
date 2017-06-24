@@ -9,20 +9,15 @@ export class AppComponent implements OnInit {
   title = 'Morse Code & Phonetics Translator';
   words:string[] = [];
   
-  constructor() { 
+  constructor() { }
 
-  }
-
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 
   public updateText(event): void {
-    let words = this.getTextArray(event.target.value);
-    this.words = words;
+    this.words = this.getTextArray(event.target.value);
   }
 
-  getTextArray(text:string): string[] {
+  public getTextArray(text:string): string[] {
     return text.match(/\b(\w+)\b/g) || [];
   }
 

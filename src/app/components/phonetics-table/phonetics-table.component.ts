@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Phonetic } from '../../models/phonetic';
 import { PhoneticService } from '../../services/phonetic.service';
-import { forEach } from 'lodash';
 
 @Component({
   selector: 'app-phonetics-table',
@@ -18,7 +17,7 @@ export class PhoneticsTableComponent implements OnInit {
     this.getPhonetics();
   }
 
-  getPhonetics(): void {
+  public getPhonetics(): void {
     this.phoneticService.getPhonetics()
       .then(phonetics => this.phonetics = phonetics);
   }
