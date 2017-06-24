@@ -1,5 +1,5 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
-import { MorseCodePipe }  from '../morse-code.pipe';
+import { MorseCodePipe }  from '../pipes/morse-code.pipe';
 import { AppComponent } from './app.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { PhoneticsTableComponent } from './phonetics-table/phonetics-table.component';

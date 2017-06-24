@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { PHONETICS } from './constants/phonetics';
+import { PHONETICS } from '../constants/phonetics';
 import { findIndex, forEach } from 'lodash';
 
 @Pipe({ name: 'morseCode' })

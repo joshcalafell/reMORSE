@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
-
 import { PhoneticsTableComponent } from './phonetics-table.component';
 import { PhoneticService } from '../../services/phonetic.service';
 
