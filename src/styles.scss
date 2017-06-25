@@ -1,33 +1,70 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin|Cormorant+SC|Karla|Merriweather|Open+Sans|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Cabin|Cormorant+SC|Karla|Merriweather|Open+Sans|Raleway');
 
 $table-gradient: linear-gradient( 0deg, blue, green 40%, red );
 $table-gradient-background:  linear-gradient( 180deg,  #E1E1E1 0%, #EAEAEA 60% );
 $table-gradient-hover-background:  linear-gradient( 180deg,  #222 0%, #666 60% );
 $table-background: #f2f2f2;
 .title {
-  font-family: 'Open Sans';
+  font-family: 'Oswald';
   text-align: center;
 }
-table {
-  font-family: 'Open Sans';
-  border-collapse: collapse;
-  width: 100%;
-  th, td {
-    text-align: left;
-    padding: 5px; 
-  }
-  th { 
-    text-transform: uppercase; 
-    border-bottom: solid 2px #333; 
-  }
-  tr:nth-child(even){ background: $table-gradient-background }
-  tr:hover{ 
-    background: $table-gradient-hover-background;
-    color: white; 
+th {
+  font-family: 'Oswald';
+}
+
+.translation-table {
+  table {
+    font-family: 'Open Sans';
+    width: 90%;
+    th, td {
+      text-align: left;
+      padding: 5px; 
+    }
+    .word {
+      width: 250px;;
+    }
+    th { 
+      text-transform: uppercase; 
+      border-bottom: solid 2px #333; 
+    }
+    tr:nth-child(even){ background: $table-gradient-background }
+    tr:hover{ 
+      background: $table-gradient-hover-background;
+      color: white; 
+    }
   }
 }
+
+.translation-table {
+  display: flex;
+  justify-content: center;
+}
+
+
+.table-legend {
+  text-align: left;
+  font-family: 'Open Sans'
+}
+
 .monospace {
   font-family: monospace;
+  font-size: 1.5rem;
+}
+
+.top-row {
+  font-family: 'Oswald';
+}
+
+.red {
+  color: #F55;
+}
+
+.text-area-component {
+  margin-top: 10px;
+  textarea {
+    font-family: 'Open Sans';
+  }
+
 }
 
 

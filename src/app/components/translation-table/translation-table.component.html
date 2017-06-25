@@ -1,16 +1,19 @@
-<div *ngIf="shouldRender">
-  <table id="table1" class="translation-table center">
+
+<div class="translation-table center" *ngIf="shouldRender">
+  <table>
     <thead>
       <tr class="tr-head">
-        <th>Word</th>
-        <th>Code</th>
+        <th class="word">Word</th>
+        <th class="code">Code</th>
       </tr>
     </thead>
     <tbody>
       <tr class="tr-body" *ngFor="let word of words">
-        <td>{{ word }}</td>
-        <td>{{ word | morseCode }}</td>
+        <td class="word">{{ word }}</td>
+        <td class="code">{{ word | morseCode }}</td>
       </tr>
     </tbody>
   </table>
 </div>
+
+

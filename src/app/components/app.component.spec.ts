@@ -6,14 +6,14 @@ import { PhoneticsTableComponent } from './phonetics-table/phonetics-table.compo
 import { LegendComponent } from './legend/legend.component';
 import { TranslationTableComponent } from './translation-table/translation-table.component';
 import { PhoneticService } from '../services/phonetic.service';
-
+import { MorseCodeService } from '../services/morse-code.service';
 
 describe('AppComponent', () => {
 
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
-  const title = 'Morse Code & Phonetics Translator';
+  const title = 'Morse Code Translator';
   
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -25,7 +25,10 @@ describe('AppComponent', () => {
         LegendComponent,
         TranslationTableComponent
       ],
-      providers: [MorseCodePipe, PhoneticService],
+      providers: [
+        PhoneticService, 
+        MorseCodeService 
+      ],
     }).compileComponents();
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
@@ -33,12 +36,11 @@ describe('AppComponent', () => {
   }));
 
   it('should create the app', async(() => {
-    
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'Morse Code & Phonetics Translator'`, async(() => {
+  it(`should have as title 'Morse Code Translator'`, async(() => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual(title);
   }));
@@ -49,11 +51,10 @@ describe('AppComponent', () => {
   }));
 
   describe('#updateText', () => {
-    let _event = { target: { value: 'sos sos' } }
+    let event = { target: { value: 'sos sos' } }
     let expected = ['sos', 'sos'];
-
     it(`sets the 'words' component property`, () => {
-      component.updateText(_event);
+      component.updateText(event);
       expect(component.words).toEqual(expected);
     });
 
@@ -62,8 +63,7 @@ describe('AppComponent', () => {
   describe('#getTextArray', () => {
     let text = 'sos abc 123';
     let expected = ['sos', 'abc', '123'];
-
-     it('should return an array of words', () => {
+    it('should return an array of words', () => {
       expect(component.getTextArray(text)).toEqual(expected);
     });
   })

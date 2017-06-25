@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MorseCodeService } from '../../services/morse-code.service';
+import { MorseCodeUnits } from '../../models/morse-code';
 
 @Component({
   selector: 'app-legend',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LegendComponent implements OnInit {
 
-  constructor() { }
+  units: MorseCodeUnits;
 
-  ngOnInit() {
+  constructor(private morseCodeService: MorseCodeService) { }
+
+  ngOnInit(): void {
+    this.getMorseCodeUnits();
+  }
+
+  public getMorseCodeUnits(): void {
+    this.morseCodeService.getMorseCodeUnits()
+      .then(units => this.units = units);
   }
 
 }

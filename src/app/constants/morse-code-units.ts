@@ -1,16 +1,6 @@
-interface SpaceUnits {
-  'between_same_letter': number;
-  'between_letters': number;
-  'between_words': number;
-}
+import { MorseCodeUnits } from '../models/morse-code';
 
-interface MorseUnits {
-  'dot': number;
-  'dash': number;
-  'space': SpaceUnits
-}
-
-export const MORSE_CODE_UNITS = <MorseUnits>{
+export const MORSE_CODE_UNITS = <MorseCodeUnits>{
   'dot': 1,
   'dash': 3,
   'space': {

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, tick, fakeAsync } from '@angular/core/testing';
 import { MorseCodePipe } from '../../pipes/morse-code.pipe';
 import { TranslationTableComponent } from './translation-table.component';
 
@@ -22,4 +22,5 @@ describe('TranslationTableComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
 });

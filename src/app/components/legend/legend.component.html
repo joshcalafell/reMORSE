@@ -1,6 +1,6 @@
-<table class="table-legend">
+<table *ngIf="units" class="table-legend">
   <thead>
-    <tr>
+    <tr class="top-row">
       <th>Chraracter</th>
       <th>Length (seconds)</th>
     </tr>
@@ -8,24 +8,25 @@
   <tbody>
     <tr>
       <th>Dot</th>
-      <td>1 Second</td>
+      <td class="red">{{ units.dot }} Seconds</td>
     </tr>
     <tr>
       <th>Dash</th>
-      <td>3 Seconds</td>
+      <td class="red">{{ units.dash }} Seconds</td>
     </tr>
-    <tr>
-      <th>Between Words</th>
-      <td>3 Seconds</td>
+     <tr>
+      <th>Between Same Letter</th>
+      <td class="red">{{ units.space.between_same_letter }} Seconds</td>
     </tr>
     <tr>
       <th>Between Letters</th>
-      <td>2 Seconds</td>
+      <td class="red">{{ units.space.between_letters }} Seconds</td>
     </tr>
     <tr>
-      <th>Between Sentences</th>
-      <td>7 Seconds</td>
-    </tr>
+      <th>Between Words</th>
+      <td class="red">{{ units.space.between_words }} Seconds</td>
+    </tr> 
   </tbody>
 </table>
+
  

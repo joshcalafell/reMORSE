@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Morse Code & Phonetics Translator';
+  title = 'Morse Code Translator';
   words:string[] = [];
   
   constructor() { }

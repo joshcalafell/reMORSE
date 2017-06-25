@@ -25,10 +25,10 @@ describe('TextAreaComponent', () => {
 
   it('emits an event on text update', (done) => {
     let event = { target:{ value: 'sos'}};
-    component.onTextUpdated.subscribe(_event => {
-        expect(_event).not.toBeFalsy();
-        expect(_event).toEqual(event);
-        done();
+    component.onTextUpdated.subscribe(e => {
+      expect(e).not.toBeFalsy();
+      expect(e).toEqual(event);
+      done();
     });
     component.updateText(event);
   });
