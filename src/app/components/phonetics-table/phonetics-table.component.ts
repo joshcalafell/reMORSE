@@ -8,7 +8,6 @@ import { PhoneticService } from '../../services/phonetic.service';
   styleUrls: ['./phonetics-table.component.scss']
 })
 export class PhoneticsTableComponent implements OnInit {
-  title = 'Morse Code & Phonetics Translator';
   phonetics: Phonetic[];
   
   constructor(private phoneticService: PhoneticService) { }

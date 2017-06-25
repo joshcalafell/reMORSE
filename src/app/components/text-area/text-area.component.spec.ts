@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
-
 import { TextAreaComponent } from './text-area.component';
 
 describe('TextAreaComponent', () => {
