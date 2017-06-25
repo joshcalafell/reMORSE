@@ -1,5 +1,5 @@
 # reMORSE
-A Morse Code translator, emitter, and more. Also can translate into NATO phonetics (i.e. Alpha, Tango, Foxtrot), and Police phonetics. Project needs direction and is in early stages of development. 
+A Morse Code translator made using AngularJS
 
 ## Screenshot
 <img src="http://i.imgur.com/55LaNwj.jpg" title="source: imgur.com" />
