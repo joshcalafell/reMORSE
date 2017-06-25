@@ -22,7 +22,7 @@ describe('TextAreaComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('emits an event on text update', (done) => {
+  it('emits an event on input in text area', (done) => {
     let event = { target:{ value: 'sos'}};
     component.onTextUpdated.subscribe(e => {
       expect(e).not.toBeFalsy();

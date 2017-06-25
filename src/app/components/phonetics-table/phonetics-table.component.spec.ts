@@ -28,8 +28,8 @@ describe('PhoneticsTableComponent', () => {
     expect(component).toBeTruthy();
   });
 
-   describe('#ngOnInit', () => {
-    it(`calls the component 'getPhonetics' method`, fakeAsync(() => {
+  describe('#ngOnInit', () => {
+    it(`calls the component's 'getPhonetics' method`, fakeAsync(() => {
       spy = spyOn(component, 'getPhonetics').and.returnValue(true); 
       component.ngOnInit();
       tick();
@@ -38,7 +38,7 @@ describe('PhoneticsTableComponent', () => {
   });
 
   describe('#getPhonetics', () => {
-    it(`calls the services 'getPhonetics' method`, fakeAsync(() => {
+    it(`calls the service's 'getPhonetics' method`, fakeAsync(() => {
       spy = spyOn(service, 'getPhonetics').and.returnValue(true); 
       expect(component.getPhonetics).toBeTruthy();
       expect(service.getPhonetics).toBeTruthy();
@@ -47,7 +47,7 @@ describe('PhoneticsTableComponent', () => {
       expect(spy);
     }));
 
-    it(`sets the component 'phonetics' property`, fakeAsync(() => {
+    it(`sets the component's 'phonetics' property`, fakeAsync(() => {
       expect(component.phonetics).not.toBeDefined();
       component.getPhonetics();
       tick();

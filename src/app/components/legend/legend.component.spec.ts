@@ -30,7 +30,7 @@ describe('LegendComponent', () => {
   });
 
   describe('#ngOnInit', () => {
-    it(`calls the component 'getMorseCodeUnits' method`, fakeAsync(() => {
+    it(`calls the component's 'getMorseCodeUnits' method`, fakeAsync(() => {
       spy = spyOn(component, 'getMorseCodeUnits').and.returnValue(true); 
       component.ngOnInit();
       tick();
@@ -39,7 +39,7 @@ describe('LegendComponent', () => {
   });
 
   describe('#getMorseCodeUnits', () => {
-    it(`calls the services 'getMorseCodeUnits' method`, fakeAsync(() => {
+    it(`calls the service's 'getMorseCodeUnits' method`, fakeAsync(() => {
       spy = spyOn(service, 'getMorseCodeUnits').and.returnValue(true); 
       expect(component.getMorseCodeUnits).toBeTruthy();
       expect(service.getMorseCodeUnits).toBeTruthy();
@@ -48,7 +48,7 @@ describe('LegendComponent', () => {
       expect(spy);
     }));
 
-    it(`sets the component 'units' property`, fakeAsync(() => {
+    it(`sets the component's 'units' property`, fakeAsync(() => {
       expect(component.units).not.toBeDefined();
       component.getMorseCodeUnits();
       tick();

@@ -53,7 +53,7 @@ describe('AppComponent', () => {
   describe('#updateText', () => {
     let event = { target: { value: 'sos sos' } }
     let expected = ['sos', 'sos'];
-    it(`sets the 'words' component property`, () => {
+    it(`sets the component's words' property`, () => {
       component.updateText(event);
       expect(component.words).toEqual(expected);
     });
@@ -63,7 +63,7 @@ describe('AppComponent', () => {
   describe('#getTextArray', () => {
     let text = 'sos abc 123';
     let expected = ['sos', 'abc', '123'];
-    it('should return an array of words', () => {
+    it('returns an array of words split by spaces', () => {
       expect(component.getTextArray(text)).toEqual(expected);
     });
   })

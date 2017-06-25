@@ -13,7 +13,7 @@ describe('PhoneticService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('returns a promise of an array of phonetics', fakeAsync(() => {
+  it('returns a promise resolution to get ponetics from service', fakeAsync(() => {
     let spy = spyOn(service, 'getPhonetics').and.returnValue(true); 
     expect(service.getPhonetics()).toBeTruthy();
   }));

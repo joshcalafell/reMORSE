@@ -16,7 +16,7 @@ describe('MorseCodeService', () => {
     expect(service).toBeTruthy();
   }));
 
-  it('returns a promise of an object with morse code units', fakeAsync(() => {
+  it('returns a promise resolution to get code units from service', fakeAsync(() => {
     let spy = spyOn(service, 'getMorseCodeUnits').and.returnValue(true); 
     expect(service.getMorseCodeUnits()).toBeTruthy();
   }));
