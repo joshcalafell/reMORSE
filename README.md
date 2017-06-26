@@ -2,7 +2,7 @@
 A Morse Code translator made using AngularJS
 
 ## Screenshot
-<img src="http://i.imgur.com/VoRCpKK.jpg" title="source: imgur.com" />
+<img src="http://i.imgur.com/fSjrFiy.jpg" title="source: imgur.com" />
 
 ## Development server
 

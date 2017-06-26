@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  title = 'M●rse - C●de - Translat●r';
+  title = 'M●rse C●de Translat●r';
   words:string[] = [];
 
   public updateText(event): void {

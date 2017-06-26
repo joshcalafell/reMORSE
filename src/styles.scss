@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald|Cabin|Cormorant+SC|Karla|Merriweather|Open+Sans|Raleway');
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Eczar|Gentium+Basic|Libre+Baskerville|Libre+Franklin|Proza+Libre|Rubik|Taviraj|Trirong|Work+Sans');
-@import url('https://fonts.googleapis.com/css?family=BioRhyme|Black+Ops+One|Bungee|Bungee+Shade|Cormorant+Garamond|Creepster|Eczar|Ewert|Fruktur|Gentium+Basic|Gravitas+One|Libre+Baskerville|Libre+Franklin|Monoton|Proza+Libre|Rubik:400,900|Taviraj|Trirong|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite|Rubik:400,900');
 $table-gradient: linear-gradient( 0deg, blue, green 40%, red );
 $table-gradient-background:  linear-gradient( 180deg,  #E1E1E1 0%, #EAEAEA 60% );
 $table-gradient-hover-background:  linear-gradient( 180deg,  #222 0%, #666 60% );
@@ -9,13 +7,20 @@ $table-background: #f2f2f2;
 body {
   background: white;
   color: #111;
-  font-family: 'Open Sans';
+  font-family: 'Special Elite';
 }
-.title {
-  font-family: 'Rubik';
-  font-weight: 900;
+
+.header {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  text-transform: UPPERCASE;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: 'Special Elite';
 }
 
 .top-container {
@@ -44,7 +49,10 @@ body {
   table {
     width: 92%;
     text-align: left;
-    thead th { font-family: 'Rubik'; }
+    thead th { 
+      font-family: 'Rubik'; 
+      font-weight: 900 
+    }
     th { 
       text-transform: uppercase; 
       background: white;
@@ -67,7 +75,7 @@ body {
   }
   thead th { font-family: 'Rubik'; }
   th, td {
-    padding-left: 5px;
+    padding: 5px;
   }
 }
 
