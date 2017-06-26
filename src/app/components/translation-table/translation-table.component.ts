@@ -7,5 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class TranslationTableComponent {
   @Input() words: string[];
-  @Input() shouldRender: boolean;
+  @Input() shouldRenderTranslation: boolean;
+
 }

@@ -1,19 +1,19 @@
 
-<h1 class="title">{{ title }}</h1>
-<div class="top-container">
-  <app-text-area (onTextUpdated)="updateText($event)"></app-text-area>
-  <app-legend></app-legend>
-  
-</div>
-<div class="bottom-container">
-  <app-translation-table 
-    [shouldRender]="words && words.length" 
-    [words]="words">
-  </app-translation-table>
+<div class="app-component">
+  <div class="">
+    <h1 class="title">{{ title }}</h1>
+  </div>
+  <div class="top-container">
+    <app-text-area (onTextUpdated)="updateText($event)"></app-text-area>
+    <app-legend></app-legend> 
+  </div>
+  <div class="bottom-container">
+    <app-translation-table 
+      [shouldRenderTranslation]="words && words.length" 
+      [words]="words">
+    </app-translation-table>
+  </div>
 </div>
 
-<!-- <div class="bottom-container">
-  <app-phonetics-table></app-phonetics-table>
-</div> -->
 
 

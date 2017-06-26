@@ -2,7 +2,6 @@ import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { MorseCodePipe }  from '../pipes/morse-code.pipe';
 import { AppComponent } from './app.component';
 import { TextAreaComponent } from './text-area/text-area.component';
-import { PhoneticsTableComponent } from './phonetics-table/phonetics-table.component';
 import { LegendComponent } from './legend/legend.component';
 import { TranslationTableComponent } from './translation-table/translation-table.component';
 import { PhoneticService } from '../services/phonetic.service';
@@ -21,7 +20,6 @@ describe('AppComponent', () => {
         MorseCodePipe,
         AppComponent,
         TextAreaComponent,
-        PhoneticsTableComponent,
         LegendComponent,
         TranslationTableComponent
       ],

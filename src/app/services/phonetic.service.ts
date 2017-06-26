@@ -5,6 +5,7 @@ import { findIndex } from 'lodash';
 
 @Injectable()
 export class PhoneticService {
+  
   constructor() { }
 
   getPhonetics(): Promise<Phonetic[]> {

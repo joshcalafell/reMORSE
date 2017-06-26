@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Morse Code Translator';
+  
+  title = 'M●rse - C●de - Translat●r';
   words:string[] = [];
 
   public updateText(event): void {

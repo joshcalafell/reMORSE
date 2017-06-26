@@ -1,49 +1,82 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Cabin|Cormorant+SC|Karla|Merriweather|Open+Sans|Raleway');
-
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Eczar|Gentium+Basic|Libre+Baskerville|Libre+Franklin|Proza+Libre|Rubik|Taviraj|Trirong|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=BioRhyme|Black+Ops+One|Bungee|Bungee+Shade|Cormorant+Garamond|Creepster|Eczar|Ewert|Fruktur|Gentium+Basic|Gravitas+One|Libre+Baskerville|Libre+Franklin|Monoton|Proza+Libre|Rubik:400,900|Taviraj|Trirong|Work+Sans');
 $table-gradient: linear-gradient( 0deg, blue, green 40%, red );
 $table-gradient-background:  linear-gradient( 180deg,  #E1E1E1 0%, #EAEAEA 60% );
 $table-gradient-hover-background:  linear-gradient( 180deg,  #222 0%, #666 60% );
 $table-background: #f2f2f2;
-.title {
-  font-family: 'Oswald';
-  text-align: center;
+
+body {
+  background: white;
+  color: #111;
+  font-family: 'Open Sans';
 }
-th {
-  font-family: 'Oswald';
+.title {
+  font-family: 'Rubik';
+  font-weight: 900;
+  text-align: center;
+  text-transform: UPPERCASE;
 }
 
-.translation-table {
+.top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.text-area-container {
+  margin-top: 10px;
+  textarea { 
+    font-size: 1.0em; 
+  }
+}
+
+.translation-table-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
   table {
-    font-family: 'Open Sans';
-    width: 90%;
-    th, td {
-      text-align: left;
-      padding: 5px; 
-    }
-    .word {
-      width: 250px;;
-    }
+    width: 92%;
+    text-align: left;
+    thead th { font-family: 'Rubik'; }
     th { 
       text-transform: uppercase; 
-      border-bottom: solid 2px #333; 
+      background: white;
     }
-    tr:nth-child(even){ background: $table-gradient-background }
-    tr:hover{ 
-      background: $table-gradient-hover-background;
-      color: white; 
+    tbody {
+      tr:nth-child(odd) { 
+        background: $table-gradient-background 
+      }
+      tr:hover { 
+        background: $table-gradient-hover-background;
+        color: white; 
+      }
     }
   }
 }
 
-.translation-table {
-  display: flex;
-  justify-content: center;
+.legend-container {
+  table {
+    background: #DDD;
+  }
+  thead th { font-family: 'Rubik'; }
+  th, td {
+    padding-left: 5px;
+  }
 }
-
 
 .table-legend {
   text-align: left;
-  font-family: 'Open Sans'
+}
+
+.word {
+  width: 250px;;
 }
 
 .monospace {
@@ -51,21 +84,12 @@ th {
   font-size: 1.5rem;
 }
 
-.top-row {
-  font-family: 'Oswald';
-}
-
 .red {
   color: #F55;
 }
 
-.text-area-component {
-  margin-top: 10px;
-  textarea {
-    font-family: 'Open Sans';
-  }
 
-}
+
 
 
 
