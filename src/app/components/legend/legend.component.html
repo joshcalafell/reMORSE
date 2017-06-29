@@ -1,34 +1,32 @@
-<div class="legend-container" *ngIf="units">
-  <table class="table-legend">
-    <thead>
-      <tr class="top-row">
-        <th>Chraracter</th>
-        <th>Length (seconds)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Dot ( ● )</th>
-        <td class="red">{{ units.dot }} Seconds</td>
-      </tr>
-      <tr>
-        <th>Dash ( - )</th>
-        <td class="red">{{ units.dash }} Seconds</td>
-      </tr>
-      <tr>
-        <th>Between Letters ( [ ] )</th>
-        <td class="red">{{ units.space.between_letters }} Seconds</td>
-      </tr>
-      <tr>
-        <th>Between Same Letter</th>
-        <td class="red">{{ units.space.between_same_letter }} Seconds</td>
-      </tr>
-      <tr>
-        <th>Between Words</th>
-        <td class="red">{{ units.space.between_words }} Seconds</td>
-      </tr> 
-    </tbody>
-  </table>
-</div>
+<table class="legend-table" *ngIf="units">
+  <thead>
+    <tr class="top-row">
+      <th>Chraracter</th>
+      <th>Length (seconds)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Dot ( ● )</th>
+      <td class="red">{{ units.dot }} Seconds</td>
+    </tr>
+    <tr>
+      <th>Dash ( - )</th>
+      <td class="red">{{ units.dash }} Seconds</td>
+    </tr>
+    <tr>
+      <th>Between Letters ( [ ] )</th>
+      <td class="red">{{ units.space.between_letters }} Seconds</td>
+    </tr>
+    <tr>
+      <th>Between Same Letter</th>
+      <td class="red">{{ units.space.between_same_letter }} Seconds</td>
+    </tr>
+    <tr>
+      <th>Between Words</th>
+      <td class="red">{{ units.space.between_words }} Seconds</td>
+    </tr> 
+  </tbody>
+</table>
 
  

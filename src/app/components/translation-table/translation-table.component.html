@@ -1,18 +1,16 @@
-<div class="translation-table-container center" *ngIf="shouldRenderTranslation">
-  <table>
-    <thead>
-      <tr>
-        <th class="word">Word</th>
-        <th class="code">Code</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let word of words">
-        <td class="word">{{ word }}</td>
-        <td class="code">{{ word | morseCode }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<table class="translation-table" *ngIf="words && words.length">
+  <caption class="caption"><h2>Translation</h2></caption>
+  <thead>
+    <tr>
+      <th class="word">Word</th>
+      <th class="code">Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let word of words">
+      <td class="word">{{ word }}</td>
+      <td class="code">{{ word | morseCode }}</td>
+    </tr>
+  </tbody>
+</table>
 

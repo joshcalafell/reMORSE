@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Special+Elite|Rubik:400,900');
-$table-gradient: linear-gradient( 0deg, blue, green 40%, red );
+
 $table-gradient-background:  linear-gradient( 180deg,  #E1E1E1 0%, #EAEAEA 60% );
 $table-gradient-hover-background:  linear-gradient( 180deg,  #222 0%, #666 60% );
 $table-background: #f2f2f2;
+$font-header: 'Rubik';
+$font-body: 'Special Elite';
+$font-body-weight: 900;
 
 body {
   background: white;
   color: #111;
-  font-family: 'Special Elite';
+  font-family: $font-body;
 }
 
 .header {
@@ -20,18 +23,20 @@ body {
 }
 
 .title {
-  font-family: 'Special Elite';
+  font-family: $font-body;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+.red {
+  color: #F55;
 }
 
 .top-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-}
-
-.bottom-container {
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
 }
 
@@ -42,63 +47,31 @@ body {
   }
 }
 
-.translation-table-container {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  table {
-    width: 92%;
-    text-align: left;
-    thead th { 
-      font-family: 'Rubik'; 
-      font-weight: 900 
-    }
-    th { 
-      text-transform: uppercase; 
-      background: white;
-    }
-    tbody {
-      tr:nth-child(odd) { 
-        background: $table-gradient-background 
-      }
-      tr:hover { 
-        background: $table-gradient-hover-background;
-        color: white; 
-      }
-    }
-  }
-}
-
-.legend-container {
-  table {
-    background: #DDD;
-  }
-  thead th { font-family: 'Rubik'; }
-  th, td {
-    padding: 5px;
-  }
-}
-
-.table-legend {
+.table {
   text-align: left;
+  thead th { font-family: $font-header; font-weight: 900; }
+  tbody {
+    th { font-family: $font-body }
+    tr:nth-child(odd) { background: $table-gradient-background }
+  }
+  th, td { padding: 3px; }
 }
 
-.word {
-  width: 250px;;
+.legend-table, .translation-table {
+  @extend .table;
 }
 
-.monospace {
-  font-family: monospace;
-  font-size: 1.5rem;
+.translation-table {
+  margin-top: 30px;
+  padding-left: 6%;
+  padding-right: 6%;
+  justify-content: center;
+  width: 100%;
+  .word { width: 25%; }
+  tbody tr:hover { 
+    background: $table-gradient-hover-background;
+    color: white; 
+  }
 }
-
-.red {
-  color: #F55;
-}
-
-
-
-
-
 
 
