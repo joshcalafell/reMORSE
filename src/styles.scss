@@ -1,29 +1,35 @@
-@import url('https://fonts.googleapis.com/css?family=Special+Elite|Rubik:400,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Special+Elite|Rubik:400,900');
 
 $table-gradient-background:  linear-gradient( 180deg,  #E1E1E1 0%, #EAEAEA 60% );
 $table-gradient-hover-background:  linear-gradient( 180deg,  #222 0%, #666 60% );
 $table-background: #f2f2f2;
 $font-header: 'Rubik';
-$font-body: 'Special Elite';
+$font-body: 'Open Sans';
 $font-body-weight: 900;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 body {
   background: white;
   color: #111;
   font-family: $font-body;
+  padding: 20px;
 }
 
-.header {
-  padding-left: 30px;
-  padding-right: 30px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: space-between;
+.text-area {
+  font-size: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title {
   font-family: $font-body;
+  text-align: center;
 }
 
 .monospace {
@@ -31,30 +37,41 @@ body {
 }
 
 .red {
-  color: #F55;
+  color: white;
 }
 
-.top-container {
+.header { color: white; }
+
+.flex-grid {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  margin: 20px 0 20px 0;
 }
 
-.text-area-container {
-  margin-top: 10px;
-  textarea { 
-    font-size: 1.0em; 
-  }
+.col {
+  background: #E55447;
+  padding: 20px;
+}
+
+.flex-grid .col {
+  flex-direction: row
+}
+.flex-grid-double {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-double .col {
+  width: 50%;
+}
+
+.caption {
+  text-align: center;
 }
 
 .table {
+  margin-left: auto;
+  margin-right: auto;
   text-align: left;
-  thead th { font-family: $font-header; font-weight: 900; }
-  tbody {
-    th { font-family: $font-body }
-    tr:nth-child(odd) { background: $table-gradient-background }
-  }
-  th, td { padding: 3px; }
+  th, td { padding: 2px; }
 }
 
 .legend-table, .translation-table {
@@ -62,15 +79,27 @@ body {
 }
 
 .translation-table {
-  margin-top: 30px;
-  padding-left: 6%;
-  padding-right: 6%;
+  background: white;
   justify-content: center;
   width: 100%;
   .word { width: 25%; }
-  tbody tr:hover { 
-    background: $table-gradient-hover-background;
-    color: white; 
+  td, th { margin: 0; padding: 0; }
+  tr { background-color: white; }
+  tbody tr:nth-child(odd) { background: #EEE;}
+  tbody tr:hover {
+    background: #333;
+    color: white;
+  }
+}
+
+@media (max-width: 700px) {
+  .flex-grid,
+  .flex-grid-double {
+    display: block;
+    .col {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
   }
 }
 
