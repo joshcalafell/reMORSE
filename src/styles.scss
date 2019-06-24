@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Special+Elite|Rubik:400,900');
 
-$table-gradient-background:  linear-gradient( 180deg,  #E1E1E1 0%, #EAEAEA 60% );
-$table-gradient-hover-background:  linear-gradient( 180deg,  #222 0%, #666 60% );
+$table-gradient-background: linear-gradient(180deg, #e1e1e1 0%, #eaeaea 60%);
+$table-gradient-hover-background: linear-gradient(180deg, #222 0%, #666 60%);
 $table-background: #f2f2f2;
 $font-header: 'Rubik';
 $font-body: 'Open Sans';
@@ -40,7 +40,9 @@ body {
   color: white;
 }
 
-.header { color: white; }
+.header {
+  color: white;
+}
 
 .flex-grid {
   display: flex;
@@ -48,12 +50,12 @@ body {
 }
 
 .col {
-  background: #E55447;
+  background: #e55447;
   padding: 20px;
 }
 
 .flex-grid .col {
-  flex-direction: row
+  flex-direction: row;
 }
 .flex-grid-double {
   display: flex;
@@ -71,10 +73,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  th, td { padding: 2px; }
+  th,
+  td {
+    padding: 2px;
+  }
 }
 
-.legend-table, .translation-table {
+.legend-table,
+.translation-table {
   @extend .table;
 }
 
@@ -82,10 +88,20 @@ body {
   background: white;
   justify-content: center;
   width: 100%;
-  .word { width: 25%; }
-  td, th { margin: 0; padding: 0; }
-  tr { background-color: white; }
-  tbody tr:nth-child(odd) { background: #EEE;}
+  .word {
+    width: 25%;
+  }
+  td,
+  th {
+    margin: 0;
+    padding: 0;
+  }
+  tr {
+    background-color: white;
+  }
+  tbody tr:nth-child(odd) {
+    background: #eee;
+  }
   tbody tr:hover {
     background: #333;
     color: white;
@@ -102,5 +118,3 @@ body {
     }
   }
 }
-
-

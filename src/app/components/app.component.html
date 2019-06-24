@@ -1,6 +1,4 @@
-
 <div class="app-component">
- 
   <h1 class="title">{{ title }}</h1>
 
   <div class="flex-grid flex-grid-double">
@@ -8,19 +6,12 @@
       <app-text-area (onTextUpdated)="updateText($event)"></app-text-area>
     </div>
     <div class="col">
-      <app-legend></app-legend> 
+      <app-legend></app-legend>
     </div>
   </div>
   <div class="flex-grid-single" *ngIf="words && words.length">
     <div class="col">
-      <app-translation-table 
-        [words]="words">
-      </app-translation-table>
+      <app-translation-table [words]="words"> </app-translation-table>
     </div>
   </div>
 </div>
-
-
-
-
-

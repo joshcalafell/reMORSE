@@ -1,15 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
-import { AppComponent } from './components/app.component';
-import { PhoneticService } from './services/phonetic.service';
-import { MorseCodeService } from './services/morse-code.service';
-import { TextAreaComponent } from './components/text-area/text-area.component';
-import { MorseCodePipe } from './pipes/morse-code.pipe';
-import { LegendComponent } from './components/legend/legend.component';
-import { TranslationTableComponent } from './components/translation-table/translation-table.component';
+import { NgModule } from '@angular/core'
+import { FormsModule } from '@angular/forms'
+import { HttpModule } from '@angular/http'
+import { BrowserModule } from '@angular/platform-browser'
+import { AppComponent } from './components/app.component'
+import { LegendComponent } from './components/legend/legend.component'
+import { TextAreaComponent } from './components/text-area/text-area.component'
+import { TranslationTableComponent } from './components/translation-table/translation-table.component'
+import { MorseCodePipe } from './pipes/morse-code.pipe'
+import { MorseCodeService } from './services/morse-code.service'
+import { PhoneticService } from './services/phonetic.service'
 
 @NgModule({
   declarations: [
@@ -17,19 +16,10 @@ import { TranslationTableComponent } from './components/translation-table/transl
     AppComponent,
     TextAreaComponent,
     LegendComponent,
-    TranslationTableComponent
+    TranslationTableComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [
-    PhoneticService, 
-    MorseCodeService
-  ],
-  bootstrap: [ AppComponent ]
+  imports: [BrowserModule, FormsModule, HttpModule],
+  providers: [PhoneticService, MorseCodeService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
-
+export class AppModule {}

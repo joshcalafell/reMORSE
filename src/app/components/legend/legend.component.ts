@@ -1,25 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { MorseCodeService } from '../../services/morse-code.service';
-import { MorseCodeUnits } from '../../models/morse-code';
+import { Component, OnInit } from '@angular/core'
+import { MorseCodeUnits } from '../../models/morse-code'
+import { MorseCodeService } from '../../services/morse-code.service'
 
 @Component({
   selector: 'app-legend',
   templateUrl: './legend.component.html',
-  styleUrls: ['./legend.component.scss']
+  styleUrls: ['./legend.component.scss'],
 })
 export class LegendComponent implements OnInit {
+  units: MorseCodeUnits
 
-  units: MorseCodeUnits;
-
-  constructor(private morseCodeService: MorseCodeService) { }
+  constructor(private morseCodeService: MorseCodeService) {}
 
   ngOnInit(): void {
-    this.getMorseCodeUnits();
+    this.getMorseCodeUnits()
   }
 
   public getMorseCodeUnits(): void {
-    this.morseCodeService.getMorseCodeUnits()
-      .then(units => this.units = units);
+    this.morseCodeService
+      .getMorseCodeUnits()
+      .then(units => (this.units = units))
   }
-
 }

@@ -1,15 +1,13 @@
-import { Injectable } from '@angular/core';
-import { Phonetic } from '../models/phonetic';
-import { PHONETICS } from '../constants/phonetics';
-import { findIndex } from 'lodash';
+import { Injectable } from '@angular/core'
+import { Phonetic } from '../models/phonetic'
+import { PHONETICS } from '../constants/phonetics'
+import { findIndex } from 'lodash'
 
 @Injectable()
 export class PhoneticService {
-  
-  constructor() { }
+  constructor() {}
 
   getPhonetics(): Promise<Phonetic[]> {
-    return Promise.resolve(PHONETICS);
+    return Promise.resolve(PHONETICS)
   }
-
 }
